@@ -1,0 +1,370 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>C++ Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#C++_and_C">C++ and C</a>
+        </li>
+        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li>
+          <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+        </li>
+        <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        <li>
+          <a class="nav-link" href="#Global_variables">Global variables</a>
+        </li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Data types</a></li>
+        <li>
+          <a class="nav-link" href="#if...else_statement">if...else statement</a>
+        </li>
+        <li><a class="nav-link" href="#while_statement">while statement</a></li>
+        <li>
+          <a class="nav-link" href="#Function_declarations">Function declarations</a>
+        </li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+          C++ is a cross-platform language that can be used to create high-performance applications.C++ was developed by Bjarne Stroustrup, as an extension to the C language.
+C++ gives programmers a high level of control over system resources and memory.
+The language was updated 5 major times in 2011, 2014, 2017, 2020, and 2023 to C++11, C++14, C++17, C++20, and C++23.    
+          </p>
+
+          <p>
+            C++ is a powerful, high-performance programming language that supports multiple programming paradigms including ,  Procedural programming (like C) , Object-oriented programming (OOP) , Generic programming and Functional-style programming (to a certain extent).
+It is often described as a “middle-level language” because it combines features of both high-level languages (like Python or Java) and low-level languages (like C and assembly). This is why to use C++
+          </p>
+          <ul>
+            <li>
+              The efficiency and control of C.
+            </li>
+            <li>
+              With the abstraction and reusability of OOP.
+            </li>
+            <li>
+              C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+
+          <ul>
+            <li>
+              Basic Computer Skills. Like how to install and use software
+            </li>
+            <li>Understanding of How Programming Works</li>
+            <li>
+              Familiarity with Basic Programming Concepts. For example , variables , data types , operators and functions. 
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="C++_and_C">
+        <header>C++ and C</header>
+        <article>
+          <p>
+            C++ and C are two closely related programming languages that share a common foundation but serve different purposes and programming styles. C, developed by Dennis Ritchie in the early 1970s, is a procedural programming language known for its simplicity, speed, and closeness to hardware. It provides low-level access to memory through pointers and is widely used in system-level programming such as operating systems, embedded systems, and firmware. Its minimalistic design makes it fast and efficient, but developers have to manage everything manually, including memory allocation and deallocation.
+          </p>
+
+          <p>
+            C++, on the other hand, was created by Bjarne Stroustrup in the late 1970s as an extension of C, adding object-oriented programming features. C++ builds on C's foundation but introduces powerful concepts like classes, inheritance, polymorphism, encapsulation, and abstraction. It also supports other paradigms such as generic programming through templates. While maintaining the performance and control that C provides, C++ enables more complex and organized code structures, making it suitable for large software systems, game engines, GUI applications, and simulations.
+          </p>
+          <p>
+            Despite their similarities, C and C++ have distinct use cases and learning curves. C is often preferred when performance is critical and system resources are limited, such as in embedded systems and kernel development. C++ is favored when software design and code reusability are important, especially in applications requiring scalability and modularity. Learning C helps in understanding how computers work at a low level, while C++ teaches both low-level control and high-level design — giving programmers a broader perspective on software development.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Hello world</header>
+        <article>
+          Let's create our first C++ file.
+Open GDB Online Compiler and select C++ language
+          <code>#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello World!";
+  return 0;
+}
+          </code>
+          Then click on "Run" button.
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>
+        A variable is a named container used to store data in a C++ program. You can think of it as a labeled box that holds a value, such as a number or text, that your program can use and modify
+        </p>
+        <p>
+          In C++, an identifier is the name used to identify variables, functions, arrays, classes, and other user-defined elements. The rules for creating valid identifiers are strict to ensure clarity and prevent conflicts. An identifier must begin with a letter (A–Z or a–z) or an underscore (_) and cannot start with a digit. After the first character, it can contain letters, digits (0–9), or underscores. Identifiers are case-sensitive, meaning Score, score, and SCORE are all considered different names.
+        </p>
+        <p>
+          Also, identifiers cannot use any of the C++ reserved keywords like int, for, class, or return. While underscores are allowed, it's good practice to avoid starting identifiers with underscores because some are reserved for internal or compiler use. For readability and professionalism, developers often follow naming conventions like camelCase, snake_case, or PascalCase depending on the project's style.
+        </p>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Declaring variables</header>
+        <article>
+          You can declare a variable in many ways:
+          <p>
+            This is the standard way to declare and optionally initialize a variable. <code>float weight = 55.5;</code> This
+            syntax can be used to declare both declaration and initialization
+          </p>
+          <p>
+            Multiple variable declarations. For example:
+            <code>int a = 5, b = 10, c = 15;</code> You can declare multiple variables of the same type in one line.
+          </p>
+          <p>
+           Constant declaration. For example: <code> const int maxScore = 100;
+</code> Use const to declare a read-only variable (its value can't be changed after initialization).
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Variable_scope">
+        <header>Variable scope</header>
+        <article>
+          <p>
+            Variable scope refers to the region of a program where a variable is accessible that is, where you can use the variable by its name. 
+          </p>
+
+          <p>
+            In C++, variables have different scopes depending on where and how they are declared. Understanding scope is essential to avoid naming conflicts and bugs.
+          </p>
+          <code>void func() {
+    int x = 10; 
+    {</code>
+          <p>
+            This behavior changes, when variables declared inside a function or a block
+          </p>
+
+          <code>void func() {
+    int x = 10;  
+    {
+        int y = 20;  
+    }
+}</code>
+        </article>
+      </section>
+      <section class="main-section" id="Global_variables">
+        <header>Global variables</header>
+        <article>
+          <p>
+           Variables declared outside of all functions have global scope.
+          </p>
+
+          <p>
+            They can be accessed anywhere in the file after their declaration. Next , overusing globals can make programs harder to maintain.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article>
+          <p>
+            A constant is a variable whose value cannot be changed once it is initialized. Using constants helps make your program safer and more readable by preventing accidental modification of values that should stay fixed. For example :
+          </p>
+
+          <code>const int DAYS_IN_WEEK = 7;</code>
+          <p>
+            A constant cannot change value through assignment or be re-declared
+            while the script is running. It has to be initialized to a value.
+          </p>
+
+          <p>
+            Trying to modify a const variable will cause a compile-time error.
+          </p>
+
+          <p>
+            You cannot declare a constant with the same name as a function or
+            variable in the same scope. For example:
+          </p>
+
+          <code>// THIS WILL CAUSE AN ERROR
+            void f() {} ;
+            const int f = 5;  // THIS WILL CAUSE AN ERROR ALSO</code>
+            However, object attributes are not protected, so the following
+            statement is executed without problems.
+          <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";</code>
+        </article>
+      </section>
+      <section class="main-section" id="Data_types">
+        <header>Data types</header>
+        <article>
+          <p>C++ has several built-in data types to store different kinds of values. These can be broadly classified into primitive types and derived types.:</p>
+          <ul>
+            <li>
+              <p>Data types that are primitives:</p>
+              <ul>
+                <li>int. Integer numbers (whole numbers)</li>
+                <li>
+                  float. Single precision floating-point
+                </li>
+                <li>
+                  double. Double precision floating-point
+                </li>
+                <li>char. Single character</li>
+                <li>bool. Boolean value (true or false) </li>
+              </ul>
+            </li>
+
+            <li>and derived types</li>
+          </ul>
+          Derived types in C++ are built from basic types to create more complex structures like pointers (which hold memory addresses), arrays (collections of elements), and references (aliases for variables). They help manage data efficiently and enable more flexible programming.
+        </article>
+      </section>
+      <section class="main-section" id="if...else_statement">
+        <header>if...else statement</header>
+        <article>
+          Use the if statement to specify a block of C++ code to be executed if a condition is true.
+          <code>if (condition) {
+  // block of code to be executed if the condition is true
+}
+  </code>
+          condition can be any expression that evaluates to true or false. See
+          Boolean for an explanation of what evaluates to true and false. 
+          <p>
+            You may also compound the statements using else if to have multiple
+            conditions tested in sequence, as follows:
+          </p>
+          <code>if (condition) {
+    // code to run if condition is true
+} else {
+    // code to run if condition is false
+}
+          </code>
+          In the case of multiple conditions only the first logical condition
+          which evaluates to true will be executed. To execute multiple
+          statements, group them within a block statement ({ ... }) . In
+          general, it's good practice to always use block statements, especially
+          when nesting if statements:
+
+          <code>if (condition) { statement_1_runs_if_condition_is_true;
+            statement_2_runs_if_condition_is_true; } else {
+            statement_3_runs_if_condition_is_false;
+            statement_4_runs_if_condition_is_false; }</code>
+          It is advisable to not use simple assignments in a conditional
+          expression, because the assignment can be confused with equality when
+          glancing over the code. For example, do not use the following code:
+          <code>if (x = y) { /* statements here */ }</code> If you need to use
+          an assignment in a conditional expression, a common practice is to put
+          additional parentheses around the assignment. For example:
+
+          <code>if ((x = y)) { /* statements here */ }</code>
+        </article>
+      </section>
+      <section class="main-section" id="while_statement">
+        <header>while statement</header>
+        <article>
+         The while loop repeatedly executes a block of code as long as a specified condition is true. It checks the condition before each iteration, so if the condition is false at the start, the loop body won’t run at all.
+
+          <code>while (condition) {
+    // code to repeat while condition is true
+}
+</code> If the condition becomes
+          false, statement within the loop stops executing and control passes to
+          the statement following the loop.
+
+          <p>
+            The condition test occurs before statement in the loop is executed.
+            If the condition returns true, statement is executed and the
+            condition is tested again. If the condition returns false, execution
+            stops and control is passed to the statement following while.
+          </p>
+
+          <p>
+            To execute multiple statements, use a block statement ({ ... }) to
+            group those statements.
+          </p>
+
+          Example:
+
+          <p>
+            The following while loop iterates as long as n is less than 5:
+          </p>
+
+          <code>while (i < 5) {
+  cout << i << "\n";
+  i++;
+}</code>
+          <p>
+            With each iteration, the loop prints the current value of i and then increments it by 1. Therefore, i takes on the following values:
+          </p>
+
+          <ul>
+            <li>After the first pass: i = 0 is printed</li>
+            <li>After the second pass: i = 1 is printed</li>
+            <li>After the third pass: i = 2 is printed</li>
+            <li>After the fourth pass: i = 3 is printed</li>
+            <li>After the fifth pass: i = 4 is printed</li>
+          </ul>
+          <p>
+            After completing the fifth pass, the condition i < 5 is no longer true, so the loop terminates.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Function_declarations">
+        <header>Function declarations</header>
+        <article>
+          A function declaration (also called a function prototype or function statement) consists of:
+          <ul>
+            <li>The return type of the function.</li>
+            <li>
+              The name of the function.
+            </li>
+            <li>
+              A list of parameters (arguments) to the function, enclosed in parentheses and separated by commas.
+            </li>
+            <li>
+              In the function definition, the statements that make up the function body are enclosed in curly braces {}.
+            </li>
+          </ul>
+          <p>
+            For example, the following code defines a simple function named
+            square:
+          </p>
+
+          <code>int square(int number) {
+    return number * number;
+}
+</code>
+          <p>
+            The function square takes one argument, called number. The function consists of one statement that returns the argument multiplied by itself. The return statement specifies the value returned by the function.
+          </p>
+          <code>return number * number;</code>
+          <p>
+           Primitive parameters (such as an int) are passed to functions by value in C++; the value is passed to the function, but if the function changes the parameter, this change is not reflected outside the function unless the parameter is passed by reference.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a href="https://www.w3schools.com/cpp/default.asp" target="_blank">W3schools</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
