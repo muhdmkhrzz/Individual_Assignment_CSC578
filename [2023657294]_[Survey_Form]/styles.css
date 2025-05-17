@@ -21,8 +21,6 @@ body {
   color: var(--color-white);
   margin: 0;
 }
-
-/* mobile friendly alternative to using background-attachment: fixed */
 body::before {
   content: '';
   position: fixed;
@@ -116,9 +114,6 @@ button {
 .text-center {
   text-align: center;
 }
-
-/* form */
-
 form {
   background: var(--color-darkblue-alpha);
   padding: 2.5rem 0.625rem;
